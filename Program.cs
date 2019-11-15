@@ -8,6 +8,8 @@ namespace runner1
 {
     static class Program
     {
+        internal static DateTime start;
+
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
