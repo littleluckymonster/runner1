@@ -117,37 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="genderBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>163, 17</value>
-  </metadata>
-  <metadata name="genderBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>163, 17</value>
-  </metadata>
-  <metadata name="wwwwDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="wwwwDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="countryBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>692, 17</value>
-  </metadata>
-  <metadata name="countryBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>692, 17</value>
-  </metadata>
-  <metadata name="wwwwDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>539, 17</value>
-  </metadata>
-  <metadata name="wwwwDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>539, 17</value>
-  </metadata>
-  <metadata name="genderTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>354, 17</value>
-  </metadata>
-  <metadata name="countryTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>887, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>49</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACcAAAAlCAIAAABOCWdpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAQ
+        6gAAEOoBgtMKmAAAAS5JREFUWEftzVFuxCAMhOG9/3F7gawVJtT8toF0V2ql7ic/JBhmHsdv+LRWHgWt
+        t209UPYGPVhZ3FPYTXpcK28o4AUKyuQ7vXuZ4oJkoReF44szp9ART3U3SGv8oT8HRTvr1nk0tjYppV+G
+        f11xkGgD2LaJVHD5/tfeQVYbwLZPpJrTH2tFSh/A1g+o5qQfbRxE9AFs/USty+SteO8HsMVA6zKfVjz2
+        A9hioHWZ2602Hc7jQOsyeavB+x9M1LqM+xohog9g6wdUcypbDVJsUrjTB1RzutE6gZs2kWpO408wD+r8
+        tfSmCi7hP5jHGX+hvDNatzZVaD+Pq07RTnZU8x1+JhQ6Kk7fRHFBvXiZgjKznVHATXpcW98wCtugByu7
+        9xplB1pvu/3gLf5P63E8AVu4buxzFMdYAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

@@ -155,6 +155,7 @@
             this.textBox1.Size = new System.Drawing.Size(188, 20);
             this.textBox1.TabIndex = 30;
             this.textBox1.Text = "Имя";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
@@ -193,6 +194,7 @@
             this.textBox4.Size = new System.Drawing.Size(188, 20);
             this.textBox4.TabIndex = 33;
             this.textBox4.Text = "Email";
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
             this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
             // 
@@ -264,7 +266,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(194, 29);
             this.label9.TabIndex = 37;
-            this.label9.Text = "Регитсрация бегуна";
+            this.label9.Text = "Регистрация бегуна";
             // 
             // label10
             // 
