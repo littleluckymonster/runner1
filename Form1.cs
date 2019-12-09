@@ -41,5 +41,12 @@ namespace runner1
             TimeSpan delta = Program.start - DateTime.Now;
             label4.Text = delta.Days.ToString() + " days, " + delta.Hours.ToString() + " hours, " + delta.Minutes.ToString() + " minutes, " + delta.Seconds.ToString() + " seconds, ";
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Form4().ShowDialog();
+            this.Show();
+        }
     }
 }

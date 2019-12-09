@@ -151,6 +151,7 @@
             this.button5.TabIndex = 12;
             this.button5.Text = "Login";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // timer1
             // 
@@ -165,7 +166,7 @@
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 13.74545F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(390, 463);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 26);
+            this.label4.Size = new System.Drawing.Size(63, 25);
             this.label4.TabIndex = 13;
             this.label4.Text = "label4";
             // 

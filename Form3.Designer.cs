@@ -147,6 +147,9 @@
             this.textBox1.Size = new System.Drawing.Size(459, 20);
             this.textBox1.TabIndex = 23;
             this.textBox1.Text = "Enter your email address";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // button1
             // 
@@ -188,6 +191,8 @@
             this.textBox2.Size = new System.Drawing.Size(459, 20);
             this.textBox2.TabIndex = 28;
             this.textBox2.Text = "Enter your password";
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // Form3
             // 

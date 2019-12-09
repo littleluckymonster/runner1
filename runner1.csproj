@@ -78,6 +78,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wwwwDataSet.cs">
+      <DependentUpon>wwwwDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="wwwwDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wwwwDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="wwwwDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wwwwDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +121,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="wwwwDataSet.xsc">
+      <DependentUpon>wwwwDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="wwwwDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>wwwwDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="wwwwDataSet.xss">
+      <DependentUpon>wwwwDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="wwwwDataSet1.xsc">
+      <DependentUpon>wwwwDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="wwwwDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>wwwwDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="wwwwDataSet1.xss">
+      <DependentUpon>wwwwDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

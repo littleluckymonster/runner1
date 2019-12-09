@@ -35,5 +35,12 @@ namespace runner1
             new Form3().ShowDialog();
             this.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Form4().ShowDialog();
+            this.Show();
+        }
     }
 }
