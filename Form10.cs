@@ -41,9 +41,9 @@ namespace runner1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new Form4().ShowDialog();
-            this.Show();
+            //this.Hide();
+            //new Form4().ShowDialog();
+            //this.Show();
         }
 
         private void label14_Click(object sender, EventArgs e)
@@ -54,6 +54,29 @@ namespace runner1
         private void Form10_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Tag == null)
+            {
+                t.Tag = t.Text;
+                t.Text = "";
+            }
+            else
+                if ((string)t.Tag == t.Text) t.Text = "";
+            t.ForeColor = Color.Black;
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            if (t.Text == "")
+            {
+                t.Text = (string)t.Tag;
+                t.ForeColor = Color.Gray;
+            }
         }
     }
 }

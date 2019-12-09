@@ -173,6 +173,31 @@ SELECT RunnerId AS Expr1, Email AS Expr2, Gender AS Expr3, RunnerId, Email, Gend
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="wwwwConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT [User].FirstName + ' ' + [User].LastName + ' - ' + CONVERT(nvarchar, RegistrationEvent.BibNumber) + ' (' + CONVERT(nvarchar, Country.CountryCode) + ') ' AS ChooseRunner, Runner.RunnerId, 
+                 Registration.RegistrationId, [User].Email
+FROM    Runner INNER JOIN
+                 [User] ON Runner.Email = [User].Email INNER JOIN
+                 Country ON Runner.CountryCode = Country.CountryCode INNER JOIN
+                 Registration ON Runner.RunnerId = Registration.RunnerId INNER JOIN
+                 RegistrationEvent ON Registration.RegistrationId = RegistrationEvent.RegistrationId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ChooseRunner" DataSetColumn="ChooseRunner" />
+              <Mapping SourceColumn="RunnerId" DataSetColumn="RunnerId" />
+              <Mapping SourceColumn="RegistrationId" DataSetColumn="RegistrationId" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -181,7 +206,7 @@ SELECT RunnerId AS Expr1, Email AS Expr2, Gender AS Expr3, RunnerId, Email, Gend
   <xs:element name="wwwwDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="wwwwDataSet" msprop:Generator_UserDSName="wwwwDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Gender" msprop:Generator_TableClassName="GenderDataTable" msprop:Generator_TableVarName="tableGender" msprop:Generator_RowChangedName="GenderRowChanged" msprop:Generator_TablePropName="Gender" msprop:Generator_RowDeletingName="GenderRowDeleting" msprop:Generator_RowChangingName="GenderRowChanging" msprop:Generator_RowEvHandlerName="GenderRowChangeEventHandler" msprop:Generator_RowDeletedName="GenderRowDeleted" msprop:Generator_RowClassName="GenderRow" msprop:Generator_UserTableName="Gender" msprop:Generator_RowEvArgName="GenderRowChangeEvent">
+        <xs:element name="Gender" msprop:Generator_TableClassName="GenderDataTable" msprop:Generator_TableVarName="tableGender" msprop:Generator_TablePropName="Gender" msprop:Generator_RowDeletingName="GenderRowDeleting" msprop:Generator_RowChangingName="GenderRowChanging" msprop:Generator_RowEvHandlerName="GenderRowChangeEventHandler" msprop:Generator_RowDeletedName="GenderRowDeleted" msprop:Generator_UserTableName="Gender" msprop:Generator_RowChangedName="GenderRowChanged" msprop:Generator_RowEvArgName="GenderRowChangeEvent" msprop:Generator_RowClassName="GenderRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender">
@@ -194,7 +219,7 @@ SELECT RunnerId AS Expr1, Email AS Expr2, Gender AS Expr3, RunnerId, Email, Gend
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Runner" msprop:Generator_TableClassName="RunnerDataTable" msprop:Generator_TableVarName="tableRunner" msprop:Generator_RowChangedName="RunnerRowChanged" msprop:Generator_TablePropName="Runner" msprop:Generator_RowDeletingName="RunnerRowDeleting" msprop:Generator_RowChangingName="RunnerRowChanging" msprop:Generator_RowEvHandlerName="RunnerRowChangeEventHandler" msprop:Generator_RowDeletedName="RunnerRowDeleted" msprop:Generator_RowClassName="RunnerRow" msprop:Generator_UserTableName="Runner" msprop:Generator_RowEvArgName="RunnerRowChangeEvent">
+        <xs:element name="Runner" msprop:Generator_TableClassName="RunnerDataTable" msprop:Generator_TableVarName="tableRunner" msprop:Generator_TablePropName="Runner" msprop:Generator_RowDeletingName="RunnerRowDeleting" msprop:Generator_RowChangingName="RunnerRowChanging" msprop:Generator_RowEvHandlerName="RunnerRowChangeEventHandler" msprop:Generator_RowDeletedName="RunnerRowDeleted" msprop:Generator_UserTableName="Runner" msprop:Generator_RowChangedName="RunnerRowChanged" msprop:Generator_RowEvArgName="RunnerRowChangeEvent" msprop:Generator_RowClassName="RunnerRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Expr1" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" />
@@ -246,6 +271,28 @@ SELECT RunnerId AS Expr1, Email AS Expr2, Gender AS Expr3, RunnerId, Email, Gend
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ChooseRunner" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnChooseRunner" msprop:Generator_ColumnPropNameInRow="ChooseRunner" msprop:Generator_ColumnPropNameInTable="ChooseRunnerColumn" msprop:Generator_UserColumnName="ChooseRunner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="228" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RunnerId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnRunnerId" msprop:Generator_ColumnPropNameInRow="RunnerId" msprop:Generator_ColumnPropNameInTable="RunnerIdColumn" msprop:Generator_UserColumnName="RunnerId" type="xs:int" />
+              <xs:element name="RegistrationId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnRegistrationId" msprop:Generator_ColumnPropNameInRow="RegistrationId" msprop:Generator_ColumnPropNameInTable="RegistrationIdColumn" msprop:Generator_UserColumnName="RegistrationId" type="xs:int" />
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -260,7 +307,8 @@ SELECT RunnerId AS Expr1, Email AS Expr2, Gender AS Expr3, RunnerId, Email, Gend
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Runner__Gender__4F7CD00D" msdata:parent="Gender" msdata:child="Runner" msdata:parentkey="Gender" msdata:childkey="Gender" msprop:Generator_UserChildTable="Runner" msprop:Generator_ChildPropName="GetRunnerRows" msprop:Generator_UserRelationName="FK__Runner__Gender__4F7CD00D" msprop:Generator_RelationVarName="relationFK__Runner__Gender__4F7CD00D" msprop:Generator_UserParentTable="Gender" msprop:Generator_ParentPropName="GenderRow" />
+      <msdata:Relationship name="FK__Runner__Gender__4F7CD00D" msdata:parent="Gender" msdata:child="Runner" msdata:parentkey="Gender" msdata:childkey="Gender" msprop:Generator_UserChildTable="Runner" msprop:Generator_ChildPropName="GetRunnerRows" msprop:Generator_UserRelationName="FK__Runner__Gender__4F7CD00D" msprop:Generator_ParentPropName="GenderRow" msprop:Generator_RelationVarName="relationFK__Runner__Gender__4F7CD00D" msprop:Generator_UserParentTable="Gender" />
+      <msdata:Relationship name="FK__Registrat__Runne__5441852A" msdata:parent="Runner" msdata:child="DataTable1" msdata:parentkey="RunnerId" msdata:childkey="RunnerId" msprop:Generator_UserChildTable="DataTable1" msprop:Generator_ChildPropName="GetDataTable1Rows" msprop:Generator_UserRelationName="FK__Registrat__Runne__5441852A" msprop:Generator_ParentPropName="RunnerRow" msprop:Generator_RelationVarName="relationFK__Registrat__Runne__5441852A" msprop:Generator_UserParentTable="Runner" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

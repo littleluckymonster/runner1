@@ -242,6 +242,8 @@
             this.textBox2.Size = new System.Drawing.Size(188, 20);
             this.textBox2.TabIndex = 89;
             this.textBox2.Text = "$500";
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // label7
             // 

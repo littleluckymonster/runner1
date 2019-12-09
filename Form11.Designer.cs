@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wwwwDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wwwwDataSet = new runner1.wwwwDataSet();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -43,6 +47,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.countryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wwwwDataSet1 = new runner1.wwwwDataSet1();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -59,8 +65,15 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.genderTableAdapter = new runner1.wwwwDataSetTableAdapters.GenderTableAdapter();
+            this.countryTableAdapter = new runner1.wwwwDataSet1TableAdapters.CountryTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wwwwDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wwwwDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wwwwDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,6 +131,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.genderBindingSource;
             this.comboBox1.DisplayMember = "Gender";
             this.comboBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.comboBox1.FormattingEnabled = true;
@@ -126,6 +140,21 @@
             this.comboBox1.Size = new System.Drawing.Size(134, 21);
             this.comboBox1.TabIndex = 55;
             this.comboBox1.ValueMember = "Gender";
+            // 
+            // genderBindingSource
+            // 
+            this.genderBindingSource.DataMember = "Gender";
+            this.genderBindingSource.DataSource = this.wwwwDataSetBindingSource;
+            // 
+            // wwwwDataSetBindingSource
+            // 
+            this.wwwwDataSetBindingSource.DataSource = this.wwwwDataSet;
+            this.wwwwDataSetBindingSource.Position = 0;
+            // 
+            // wwwwDataSet
+            // 
+            this.wwwwDataSet.DataSetName = "wwwwDataSet";
+            this.wwwwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox5
             // 
@@ -136,6 +165,8 @@
             this.textBox5.Size = new System.Drawing.Size(188, 20);
             this.textBox5.TabIndex = 54;
             this.textBox5.Text = "Фамилия";
+            this.textBox5.Enter += new System.EventHandler(this.textBox5_Enter);
+            this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
             // 
             // textBox1
             // 
@@ -146,6 +177,8 @@
             this.textBox1.Size = new System.Drawing.Size(188, 20);
             this.textBox1.TabIndex = 50;
             this.textBox1.Text = "Имя";
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // label7
             // 
@@ -221,6 +254,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.countryBindingSource;
             this.comboBox2.DisplayMember = "CountryName";
             this.comboBox2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.comboBox2.FormattingEnabled = true;
@@ -229,6 +263,16 @@
             this.comboBox2.Size = new System.Drawing.Size(190, 21);
             this.comboBox2.TabIndex = 63;
             this.comboBox2.ValueMember = "CountryCode";
+            // 
+            // countryBindingSource
+            // 
+            this.countryBindingSource.DataMember = "Country";
+            this.countryBindingSource.DataSource = this.wwwwDataSet1;
+            // 
+            // wwwwDataSet1
+            // 
+            this.wwwwDataSet1.DataSetName = "wwwwDataSet1";
+            this.wwwwDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label13
             // 
@@ -292,6 +336,9 @@
             this.textBox6.Size = new System.Drawing.Size(188, 20);
             this.textBox6.TabIndex = 57;
             this.textBox6.Text = "Photo_logo.jpg";
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.textBox6.Enter += new System.EventHandler(this.textBox6_Enter);
+            this.textBox6.Leave += new System.EventHandler(this.textBox6_Leave);
             // 
             // pictureBox3
             // 
@@ -347,6 +394,8 @@
             this.textBox2.Size = new System.Drawing.Size(188, 20);
             this.textBox2.TabIndex = 68;
             this.textBox2.Text = "Re-enter password";
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // textBox3
             // 
@@ -357,6 +406,9 @@
             this.textBox3.Size = new System.Drawing.Size(188, 20);
             this.textBox3.TabIndex = 67;
             this.textBox3.Text = "Password";
+            this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
+            this.textBox3.Validated += new System.EventHandler(this.textBox3_Validated);
             // 
             // button2
             // 
@@ -403,6 +455,14 @@
             this.label15.TabIndex = 72;
             this.label15.Text = "Рекдактирование профиля";
             // 
+            // genderTableAdapter
+            // 
+            this.genderTableAdapter.ClearBeforeFill = true;
+            // 
+            // countryTableAdapter
+            // 
+            this.countryTableAdapter.ClearBeforeFill = true;
+            // 
             // Form11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,8 +502,14 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form11";
             this.Text = "Form11";
+            this.Load += new System.EventHandler(this.Form11_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wwwwDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wwwwDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wwwwDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -483,5 +549,12 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.BindingSource wwwwDataSetBindingSource;
+        private wwwwDataSet wwwwDataSet;
+        private System.Windows.Forms.BindingSource genderBindingSource;
+        private wwwwDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
+        private wwwwDataSet1 wwwwDataSet1;
+        private System.Windows.Forms.BindingSource countryBindingSource;
+        private wwwwDataSet1TableAdapters.CountryTableAdapter countryTableAdapter;
     }
 }

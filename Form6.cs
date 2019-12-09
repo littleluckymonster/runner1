@@ -34,6 +34,8 @@ namespace runner1
 
         private void Form6_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "wwwwDataSet.DataTable1". При необходимости она может быть перемещена или удалена.
+            this.dataTable1TableAdapter.Fill(this.wwwwDataSet.DataTable1);
 
         }
 
@@ -245,7 +247,7 @@ namespace runner1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -253,6 +255,16 @@ namespace runner1
             this.Hide();
             new Form7().ShowDialog();
             this.Show();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_Enter(object sender, EventArgs e)
+        {
+           
         }
     }
 }
